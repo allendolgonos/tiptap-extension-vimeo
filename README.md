@@ -16,13 +16,12 @@ npm install @fourwaves/tiptap-extension-vimeo
 
 ## Usage
 
-```
-import { Vimeo } from '@fourwaves/tiptap-extension-vimeo'
+```typescript
+import { Vimeo } from '@fourwaves/tiptap-extension-vimeo';
 
 const editor = new Editor({
   extensions: [Vimeo],
-})
-
+});
 ```
 
 ### Configuration Options
@@ -54,3 +53,7 @@ The following options can be passed to `Vimeo.configure` along with their defaul
 - `inline`: `false` – Enable or disable inline video display.
 - `width`: `640` – Set the width of the video player.
 - `height`: `480` – Set the height of the video player.
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
