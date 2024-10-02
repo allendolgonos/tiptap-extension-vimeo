@@ -4,8 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var core = require('@tiptap/core');
 
-const VIMEO_REGEX = /^(https?:\/\/)?(www\.)?(vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)$/;
-const VIMEO_REGEX_GLOBAL = /^(https?:\/\/)?(www\.)?(vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)$/g;
+const VIMEO_REGEX = /^(https?:\/\/)?(www\.)?(vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)(\/?.*)?$/;
+const VIMEO_REGEX_GLOBAL = /^(https?:\/\/)?(www\.)?(vimeo\.com\/\d+|player\.vimeo\.com\/video\/\d+)(\/?.*)?$/g;
 const isValidVimeoUrl = (url) => {
     return url.match(VIMEO_REGEX);
 };
@@ -214,7 +214,6 @@ const Vimeo = core.Node.create({
                     style: 'position:absolute; top:0; left:0; width:100%; height:100%;',
                 }, HTMLAttributes),
             ],
-            ['script', { src: 'https://player.vimeo.com/api/player.js' }],
         ];
     },
 });

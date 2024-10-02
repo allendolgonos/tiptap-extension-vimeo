@@ -186,7 +186,6 @@ export const Vimeo = Node.create<VimeoOptions>({
           HTMLAttributes
         ),
       ],
-      ['script', { src: 'https://player.vimeo.com/api/player.js' }],
     ];
   },
 });
