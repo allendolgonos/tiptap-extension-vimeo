@@ -1,13 +1,13 @@
 {
-  "name": "@fourwaves/tiptap-extension-vimeo",
+  "name": "tiptap-extension-vimeo",
   "description": "a vimeo embed extension for tiptap",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "build": "npm run clean && rollup -c",
     "dev": "npm run clean && rollup -c -w"
   },
@@ -17,6 +17,7 @@
     "@rollup/plugin-commonjs": "^24.0.1",
     "@tiptap/core": "^2.0.0-beta.220",
     "@tiptap/pm": "^2.0.0-beta.220",
+    "rimraf": "^6.0.1",
     "rollup": "^3.17.3",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
@@ -33,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fourwaves/tiptap-extension-vimeo.git"
+    "url": "https://github.com/allendolgonos/tiptap-extension-vimeo.git"
   },
   "keywords": [
     "tiptap",
