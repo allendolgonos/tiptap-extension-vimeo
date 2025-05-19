@@ -1,5 +1,5 @@
 {
-  "name": "tiptap-extension-vimeo",
+  "name": "@allendolgonos/tiptap-extension-vimeo",
   "description": "a vimeo embed extension for tiptap",
   "version": "1.0.1",
   "license": "MIT",
