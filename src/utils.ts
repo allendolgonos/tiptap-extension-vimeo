@@ -57,7 +57,7 @@ export const getEmbedUrlFromVimeoUrl = (options: GetEmbedUrlOptions) => {
   if (!isValidVimeoUrl(url)) {
     return null;
   }
-  const videoIdRegex = /(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)/;
+  const videoIdRegex = /(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)(?:\/([a-f0-9]+))?/;
   const matches = videoIdRegex.exec(url);
 
   if (!matches || !matches[1]) {
@@ -67,6 +67,10 @@ export const getEmbedUrlFromVimeoUrl = (options: GetEmbedUrlOptions) => {
   let outputUrl = `https://player.vimeo.com/video/${matches[1]}`;
 
   const params: string[] = [];
+
+  if (matches[2]) {
+    params.push(`h=${matches[2]}`);
+  }
 
   if (autopause !== undefined) {
     params.push(`autopause=${autopause ? 1 : 0}`);
